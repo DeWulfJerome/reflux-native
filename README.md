@@ -1,4 +1,4 @@
-# reflux-native
+# Reflux-native
 
 ## Installation
 Install the script globally by running the following command from the reflux-native directory
