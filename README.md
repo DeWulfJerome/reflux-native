@@ -3,7 +3,7 @@
 ## Installation
 Install the script globally by running the following command from the reflux-native directory
 
-```npm install -g````
+```npm install -g```
 
 Thats it!
 
