@@ -16,17 +16,21 @@ console.log(
   )
 );
 
+const choices = ["axios", "moment", "lodash"];
+
 const run = async () => {
   const projectName = await inquirer.askProjectName();
   const installed = await reactNative.installReactNative(
     projectName.projectname
   );
+  const optionalDeps = await inquirer.askDependencies(choices);
   const dependencies = await reactNative.installDependencies(
-    projectName.projectname
+    projectName.projectname,
+    optionalDeps
   );
   console.log(
     chalk.greenBright(
-      `Success! Cd into ${projectName.projectname} and run 'react-native run-ios/run-android' to start your app..'`
+      `Success! Cd into ${projectName.projectname} and run 'react-native run-ios/run-android' to start your app...'`
     )
   );
 };
